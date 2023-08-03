@@ -1,11 +1,11 @@
 import { FC } from "react"
 import Link from "next/link"
 
-import { BlogPost } from "@/types/blog"
+import { PostMeta } from "@/types/blog"
 import { getFormattedDate } from "@/lib/utils"
 
 interface PostProps {
-  post: BlogPost
+  post: PostMeta
 }
 
 const Post: FC<PostProps> = ({ post }) => {
@@ -13,7 +13,10 @@ const Post: FC<PostProps> = ({ post }) => {
   const formattedDate = getFormattedDate(date)
   return (
     <li>
-      <Link href={`/posts/${id}`} className="text-xl font-semibold underline">
+      <Link
+        href={`/blog/posts/${id}`}
+        className="text-xl font-semibold underline"
+      >
         {title}
       </Link>
       <br />

@@ -16,3 +16,5 @@ export const siteConfig = {
     docs: "https://ui.shadcn.com",
   },
 }
+
+export const REVALIDATION_TIME = 86400
